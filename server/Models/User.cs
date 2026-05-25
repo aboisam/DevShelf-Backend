@@ -14,6 +14,8 @@ public class User
         PasswordHash = hash;
     }
 
-public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
+
+    public List<Resource> Resources { get; set; } = new();
 }
 
