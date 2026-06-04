@@ -13,7 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Custom services
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuthService>();
-
+builder.Services.AddScoped<ResourceService>();
 
 //Read JWT configuration 
 var jwtKey = builder.Configuration["Jwt:Key"];
@@ -62,6 +62,8 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddAuthorization();
+
+builder.Services.AddScoped<ResourceService>();
 
 var app = builder.Build();
 app.UseCors("AllowFrontend");
