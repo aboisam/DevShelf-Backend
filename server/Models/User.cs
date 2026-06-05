@@ -17,5 +17,6 @@ public class User
     public DateTime CreatedAt { get; set; }
 
     public List<Resource> Resources { get; set; } = new();
+    public List<DevTask> Tasks { get; set; } = new();
 }
 
