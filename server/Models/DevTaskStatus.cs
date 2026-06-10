@@ -1,6 +1,6 @@
 namespace server.Models;
 
-public enum TaskStatus
+public enum DevTaskStatus
 {
     ToDo,
     InProgress,

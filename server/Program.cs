@@ -14,6 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<ResourceService>();
+builder.Services.AddScoped<TaskService>();
 
 //Read JWT configuration 
 var jwtKey = builder.Configuration["Jwt:Key"];
@@ -47,7 +48,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins("http://localhost:5009")
               .AllowAnyMethod()
               .AllowAnyHeader();
     });

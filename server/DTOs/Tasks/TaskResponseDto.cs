@@ -1,18 +1,16 @@
-namespace server.Models;
+namespace server.DTOs.Tasks;
 
-public class DevTask
+using server.Models;
+
+public class TaskResponseDto
 {
     public Guid Id { get; set; }
     public required string Title { get; set; }
     public string Description { get; set; } = string.Empty;
-    public DevTaskStatus Status { get; set; } = DevTaskStatus.ToDo;
-    public TaskPriority Priority { get; set; } = TaskPriority.Medium;
+    public DevTaskStatus Status { get; set; }
+    public TaskPriority Priority { get; set; }
     public string Project { get; set; } = string.Empty;
     public DateTime? DueDate { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-
-    // Relationship
-    public Guid UserId { get; set; }
-    public User User { get; set; } = null!;
 }
