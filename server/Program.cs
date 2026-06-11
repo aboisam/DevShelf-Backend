@@ -13,8 +13,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Custom services
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<DashboardService>();
+builder.Services.AddScoped<SnippetService>();
 builder.Services.AddScoped<ResourceService>();
 builder.Services.AddScoped<TaskService>();
+
 
 //Read JWT configuration 
 var jwtKey = builder.Configuration["Jwt:Key"];

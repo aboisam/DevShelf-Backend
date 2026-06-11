@@ -7,4 +7,8 @@ public class CreateSnippetDto
     public required string Code { get; set; }
     public required string Language { get; set; }
     public List<string> Tags { get; set; } = new();
+
+
+
 }
+
